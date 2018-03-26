@@ -1,0 +1,454 @@
+/*RESET CSS BEGIN*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/*RESET CSS END*/
+
+
+/*HELPER CLASS BEGIN*/
+
+img{
+  max-width: 100%;
+}
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 20px 0;
+}
+
+ul li,
+ol li {
+    margin-bottom: 10px;
+}
+
+
+/*HELPER CLASS END*/
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.wrapper{
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+/* NAVIGATION BAR + header STYLE START  <- The show starts here*/
+header{
+  background: transparent;
+  width: 100%;
+  position: relative;
+
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.85);
+  transform: translateY(-200%);
+  transition: 0.3s;
+  z-index: 5;
+}
+
+body.scroll header.sticky{
+transform: translateY(0%);
+
+}
+
+.nav-wrapper{
+
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0;
+
+}
+
+nav ul li a {
+  font-size: 17px;
+  line-height: 22px; /* Must be 5 more than the font-size*/
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+  padding-bottom: 3px;
+
+}
+/* QUANDO PASSARMOS O CURSOR EM CIMA, APARECE UMA UNDERLINE BRANCA*/
+nav ul li a:hover {
+    border-bottom: 1px solid #ffffff
+
+}
+/* SELECIONANDO O TAMANHO DO LOGO*/
+/* O LOGO ESTAVA MUITO GRANDE, COLOQUEI 100px, FICOU LEGAL AGR :)*/
+header .logo img{
+  max-width: 100px
+
+}
+
+/*PARALLAX STYLE START HERE*/
+
+.cover-main{
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') right bottom;
+background-repeat: no-repeat;
+background-size: cover;
+height: 60vh;
+}
+
+ul#scene{
+  margin-top: 100px;
+  /*display: flex;
+  justify-content: space-around;
+  align-items: center;*/
+
+}
+
+ul#scene li.name{
+  text-align: center;
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+}
+
+ul#scene li.title{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 35px;
+  color: white;
+  width: 100%;
+}
+
+
+ul#scene li.btn{
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.portfolio-btn,
+.contact-btn{
+  margin: 0 auto;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.portfolio-btn:hover,
+.contact-btn:hover{
+  background: white;
+  text-decoration: none;
+  color: black;
+  transition: 0.4s;
+}
+.portfolio-btn{
+  margin-right: 30px;
+}
+
+.contact-btn{
+  margin-left: 30px;
+}
+/*PARALLAX STYLE ENDS HERE*/
+
+/* MASONRY JS STYLES STARTS HERE*/
+
+.masonry-grid{
+  position: relative;
+}
+
+.grid{
+  margin: 0 auto;
+}
+
+.grid-item{
+  width: 450px;
+  margin-bottom: 10px;
+}
+
+.tall-img{
+  height: 680px;
+}
+
+h2.sub-title{
+  position: relative;
+  display: block;
+  margin: 70px auto;
+  text-align: center;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+/* LINHA EMBAIXO DO MY Photography Portfolio*/
+h2.sub-title::after{
+  display: block;
+  height: 2px;
+  background-color: black;
+  content: "";
+  width: 100px;
+  margin: 30px auto 0 auto;
+}
+
+section.beating-heart{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg') no-repeat right bottom / cover;
+    text-align: center;
+    height: 100vh;
+    padding: 50px 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+section.beating-heart span{
+    font-size: 100px;
+    line-height: 105px;
+
+}
+
+section.beating-heart h2{
+    margin-bottom: 30px;
+
+}
+
+section.beating-heart h2::after{
+  background: white;
+
+}
+
+.heart{
+    position: relative;
+    fill: red;
+    width: 150px;
+    margin: 0 50px;
+    animation: pulse 1s infinite;
+
+}
+
+@keyframes pulse {
+
+  0%{
+
+    transform: scale(1);
+
+  }
+
+  15%{
+
+    transform: scale(1.25);
+
+  }
+
+  25%{
+
+      transform: scale(1.15);
+
+  }
+
+  35%{
+
+      transform: scale(1.25);
+
+  }
+
+  50%{
+    transform: scale(2);
+
+  }
+
+  100%{
+
+    transform: scale(1);
+
+  }
+}
